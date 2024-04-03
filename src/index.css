@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.albumcarousel{
+    max-width: 100vw;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.albumcarousel .swiper-wrapper{
+    max-width: 100vw;
+    max-height: 100vh;
+    height: fit-content;
+}
+.albumcarousel .swiper-slide{
+    justify-items: center;
+}
+.albumcarousel .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 245px;
+    max-width: 300px;
+}
+.albumcarousel .swiper-pagination{
+    position: relative;
+}
+.albumcarousel .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.204);
+}
+
+.albumcarousel .swiper-pagination-bullet-active {
+    color: #000000;
+    background: #0ce751;
+}
+
+.trackcarousel{
+    max-width: 100vw;
+    width: 100%;
+    min-height: 100px;
+    background-color: #ce6b39;
+}
+
+.trackcarousel .swiper-slide{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: solid #000000 1px;
 }
